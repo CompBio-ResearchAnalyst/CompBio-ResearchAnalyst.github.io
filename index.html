@@ -60,7 +60,7 @@
       <p class="eyebrow">Computational Biology · Single-Cell &amp; Spatial Transcriptomics</p>
       <h1 class="hero__name">Rahul V Sangoji</h1>
       <p class="hero__tagline">Mapping cellular heterogeneity in cancer, one dataset at a time.</p>
-      <p class="hero__body">I build end-to-end pipelines for single-cell and spatial transcriptomics - from raw reads to the biology that explains disease. Independent researcher, open to remote roles and relocation.</p>
+      <p class="hero__body">I build end-to-end pipelines for single-cell and spatial transcriptomics - from raw reads to the biology that explains disease, increasingly paired with cross-validated machine learning to test those findings a second way. Independent researcher, open to remote roles and relocation.</p>
       <div class="hero__actions">
         <a href="#research" class="btn btn--primary">Featured research</a>
         <a href="https://github.com/CompBio-ResearchAnalyst" class="btn btn--ghost">GitHub ↗</a>
@@ -73,7 +73,7 @@
   <section id="about" class="about">
     <div class="section-inner">
       <p class="eyebrow">About</p>
-      <p class="about__lede">I specialise in single-cell RNA sequencing and spatial transcriptomics - designing analysis workflows that run from preprocessing through dimensionality reduction, cell type annotation, trajectory inference, and network-level interpretation. My work sits at the intersection of cancer biology and tumour microenvironments, approached with reproducibility in mind: explicit parameters, clearly defined scope, and methods kept current as the field evolves.</p>
+      <p class="about__lede">I specialise in single-cell RNA sequencing and spatial transcriptomics - designing analysis workflows that run from preprocessing through dimensionality reduction, cell type annotation, trajectory inference, and network-level interpretation. My work sits at the intersection of cancer biology and tumour microenvironments, approached with reproducibility in mind: explicit parameters, clearly defined scope, and methods or approach designed to adapt as the field evolves.</p>
 
       <div class="chips" role="list" aria-label="Focus areas">
         <span role="listitem" class="chip">Single-cell RNA-seq</span>
@@ -83,14 +83,16 @@
         <span role="listitem" class="chip">Biomarker discovery</span>
         <span role="listitem" class="chip">Cell-cell communication</span>
         <span role="listitem" class="chip">Multi-omics integration</span>
+        <span role="listitem" class="chip">Machine learning</span>
+        <span role="listitem" class="chip">Explainable AI</span>
       </div>
 
-      <p class="toolkit"><span class="toolkit__label">Core toolkit</span> Seurat · Scanpy · SquidPy · Harmony · Monocle3 · CellChat · RCTD · Space Ranger · GATK · Nextflow · Shiny</p>
+      <p class="toolkit"><span class="toolkit__label">Core toolkit -</span>Seurat · Scanpy · SquidPy · Harmony · Monocle3 · CellChat · RCTD · Space Ranger · GATK · Nextflow · Shiny · scikit-learn · XGBoost · PyTorch · SHAP</p>
 
       <div class="stats stats--about" role="list">
         <div class="stat" role="listitem"><span class="stat__num">Top 3</span><span class="stat__label">applicant pool - invited PhD research evaluation, Germany</span></div>
         <div class="stat" role="listitem"><span class="stat__num">8</span><span class="stat__label">end-to-end pipelines - single-cell to variant calling</span></div>
-        <div class="stat" role="listitem"><span class="stat__num">1 + 1</span><span class="stat__label">peer-reviewed publication; solo-authored preprint</span></div>
+        <div class="stat" role="listitem"><span class="stat__num">1 + 2</span><span class="stat__label">peer-reviewed publication; solo-authored preprints</span></div>
         <div class="stat" role="listitem"><span class="stat__num">5+</span><span class="stat__label">years of research experience, independent &amp; supervised</span></div>
       </div>
 
@@ -103,29 +105,50 @@
 
   <!-- ================= RESEARCH / PREPRINT ================= -->
   <section id="research" class="research">
-    <div class="section-inner">
-      <p class="eyebrow">Featured research - independent, solo-authored</p>
-      <h2 class="research__title">Mapping the immunosuppressive trajectory of glioblastoma myeloid cells</h2>
+  <div class="section-inner">
+    <p class="eyebrow">Featured research - independent, solo-authored</p>
+    <h2 class="research__title">Cross-validated machine learning corroborates RUNX1 as a discriminant of glioblastoma myeloid commitment</h2>
 
-      <a href="https://doi.org/10.5281/zenodo.22104278" class="pill pill--live">Read the preprint ↗</a>
+    <a href="https://zenodo.org/records/22931850" class="pill pill--live">Read the preprint ↗</a>
 
-      <div class="stats" role="list">
-        <div class="stat" role="listitem"><span class="stat__num">11</span><span class="stat__label">patients, glioblastoma cohort</span></div>
-        <div class="stat" role="listitem"><span class="stat__num">101,028</span><span class="stat__label">cells, 4-method cross-validated atlas</span></div>
-        <div class="stat" role="listitem"><span class="stat__num">43,918</span><span class="stat__label">cells, myeloid trajectory sub-atlas</span></div>
-        <div class="stat" role="listitem"><span class="stat__num">264</span><span class="stat__label">TCGA-GBM patients, clinical validation</span></div>
-      </div>
-
-      <ul class="findings">
-        <li>101,028 cells annotated across four independent methods, cross-validated against dual-algorithm copy-number inference</li>
-        <li>A single convergent route to a terminally immunosuppressive TREM2⁺ state, unfolding in two kinetically distinct phases</li>
-        <li>RUNX1 identified as the most robust regulator among seven candidates - held up against sequencing-depth and single-patient confounding, linked to TGF-β/SMAD signalling</li>
-        <li>Validated spatially (RCTD deconvolution, spatial autocorrelation) and clinically (264 TCGA-GBM patients) - including a null result, reported as found</li>
-      </ul>
-
-      <p class="research__note">Code and pipeline are not public for this project - the manuscript and its figures are the intended record of the work.</p>
+    <div class="stats" role="list">
+      <div class="stat" role="listitem"><span class="stat__num">3</span><span class="stat__label">model architectures, patient-grouped cross-validation</span></div>
+      <div class="stat" role="listitem"><span class="stat__num">0.965-0.987</span><span class="stat__label">median AUROC across 11 held-out patients</span></div>
+      <div class="stat" role="listitem"><span class="stat__num">69 / 754</span><span class="stat__label">RUNX1's SHAP rank among transcription factors</span></div>
+      <div class="stat" role="listitem"><span class="stat__num">10 / 11</span><span class="stat__label">patient exclusions holding that rank stable</span></div>
     </div>
-  </section>
+
+    <ul class="findings">
+      <li>Elastic-net, XGBoost and a PyTorch multilayer perceptron cross-validated by leave-one-patient-out, remaining accurate after removing every class-defining marker gene</li>
+      <li>SHAP and permutation-based feature importance, across gene-level and transcription-factor-activity feature spaces, corroborating a prior single-cell correlational finding via an orthogonal computational framework</li>
+      <li>RUNX1 held a stable top-decile SHAP rank across ten of eleven patient exclusions - the sole exception traced to an 85 percent sample-size reduction, not a single patient driving the result</li>
+      <li>Reports on method consensus and conflict - a gene-level blind search and two SMAD-family members did not replicate to the same standard</li>
+    </ul>
+
+    <p class="research__note">Second solo-authored preprint, corroborating the first through an orthogonal computational method on the same cohort.</p>
+
+    <h3 class="subsection-title">Previous preprint</h3>
+    <h4 class="research__title--secondary">Mapping the immunosuppressive trajectory of glioblastoma myeloid cells</h4>
+
+    <a href="https://zenodo.org/records/22104278" class="pill pill--live">Read the preprint ↗</a>
+
+    <div class="stats" role="list">
+      <div class="stat" role="listitem"><span class="stat__num">11</span><span class="stat__label">patients, glioblastoma cohort</span></div>
+      <div class="stat" role="listitem"><span class="stat__num">101,028</span><span class="stat__label">cells, 4-method cross-validated atlas</span></div>
+      <div class="stat" role="listitem"><span class="stat__num">43,918</span><span class="stat__label">cells, myeloid trajectory sub-atlas</span></div>
+      <div class="stat" role="listitem"><span class="stat__num">264</span><span class="stat__label">TCGA-GBM patients, clinical validation</span></div>
+    </div>
+
+    <ul class="findings">
+      <li>101,028 cells annotated across four independent methods, cross-validated against dual-algorithm copy-number inference</li>
+      <li>A single convergent route to a terminally immunosuppressive TREM2⁺ state, unfolding in two kinetically distinct phases</li>
+      <li>RUNX1 proved the most robust of seven candidates - held up against sequencing-depth and single-patient confounding, linked to TGF-β/SMAD signalling</li>
+      <li>Validated spatially (RCTD deconvolution, spatial autocorrelation) and clinically (264 TCGA-GBM patients) - including a null result, reported as found</li>
+    </ul>
+
+    <p class="research__note">Code and pipeline are not public for this project - the manuscript and its figures are the intended record of the work.</p>
+  </div>
+</section>
 
   <!-- ================= PORTFOLIO ================= -->
   <section id="portfolio" class="portfolio">
@@ -157,6 +180,7 @@
 
       <h3 class="subsection-title">Additional research</h3>
       <ul class="research-list">
+      <li><span class="research-list__title">Glioblastoma myeloid ML/DL cross-validation</span> - three-model SHAP/permutation-importance pipeline. <em>Private - on request.</em></li>
         <li><span class="research-list__title">ccRCC tumour myeloid characterisation</span> - competitive research task for a PhD lab in Germany; multi-method cross-validated annotation of the tumour-immune microenvironment. <em>Findings discussed on request.</em></li>
         <li><span class="research-list__title">Consensus variant calling pipeline</span> - GATK + FreeBayes + BCFtools via Nextflow DSL2, 2-of-3 consensus. <em>Private - on request.</em></li>
         <li><span class="research-list__title">Microarray biomarker discovery</span> - R Shiny ROC/AUC tool, loads any GEO series. <em>Private - on request.</em></li>
